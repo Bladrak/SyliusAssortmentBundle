@@ -40,4 +40,18 @@ interface VariantManipulatorInterface
      * @param VariantInterface $variant
      */
     function delete(VariantInterface $variant);
+
+    /**
+     * Moves variant up.
+     *
+     * @param VariantInterface $variant
+     */
+    function moveUp(VariantInterface $variant);
+
+    /**
+     * Moves variant down.
+     *
+     * @param VariantInterface $variant
+     */
+    function moveDown(VariantInterface $variant);
 }

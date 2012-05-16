@@ -100,6 +100,8 @@ class CustomizableProduct extends Product implements CustomizableProductInterfac
         $masterVariant->setProduct($this);
         $masterVariant->setMaster(true);
 
+        $this->sku = $masterVariant->getSku();
+
         $this->masterVariant = $masterVariant;
     }
 

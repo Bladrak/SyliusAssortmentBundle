@@ -17,6 +17,14 @@ sylius_assortment_backend_variant_delete:
     pattern: /{id}/delete
     defaults: { _controller: sylius_assortment.controller.backend.variant:deleteAction }
 
+sylius_assortment_backend_variant_move_up:
+    pattern: /{id}/move-up
+    defaults: { _controller: sylius_assortment.controller.backend.variant:moveUpAction }
+
+sylius_assortment_backend_variant_move_down:
+    pattern: /{id}/move-down
+    defaults: { _controller: sylius_assortment.controller.backend.variant:moveDownAction }
+
 sylius_assortment_backend_variant_show:
     pattern: /{id}
     defaults: { _controller: sylius_assortment.controller.backend.variant:showAction }

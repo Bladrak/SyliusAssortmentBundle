@@ -55,6 +55,20 @@ interface VariantManagerInterface
     function removeVariant(VariantInterface $variant);
 
     /**
+     * Moves variant up.
+     *
+     * @param VariantInterface $variant
+     */
+    function moveVariantUp(VariantInterface $variant);
+
+    /**
+     * Moves variant down.
+     *
+     * @param VariantInterface $variant
+     */
+    function moveVariantDown(VariantInterface $variant);
+
+    /**
      * Finds variant by id.
      *
      * @param integer $id

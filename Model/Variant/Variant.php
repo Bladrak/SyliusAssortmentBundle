@@ -64,6 +64,13 @@ abstract class Variant implements VariantInterface
     protected $options;
 
     /**
+     * Variant position in list.
+     *
+     * @var integer
+     */
+    protected $position;
+
+    /**
      * Creation time.
      *
      * @var DateTime
@@ -242,6 +249,22 @@ abstract class Variant implements VariantInterface
     public function hasOption(OptionValueInterface $option)
     {
         return in_array($option, $this->options);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getPosition()
+    {
+        return $this->position;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function setPosition($position)
+    {
+        $this->position = $position;
     }
 
     /**

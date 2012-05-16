@@ -61,4 +61,20 @@ class VariantManipulator implements VariantManipulatorInterface
     {
         $this->variantManager->removeVariant($variant);
     }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function moveUp(VariantInterface $variant)
+    {
+        $this->variantManager->moveVariantUp($variant);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function moveDown(VariantInterface $variant)
+    {
+        $this->variantManager->moveVariantDown($variant);
+    }
 }

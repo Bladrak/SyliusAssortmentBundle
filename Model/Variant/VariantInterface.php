@@ -148,6 +148,20 @@ interface VariantInterface
     function hasOption(OptionValueInterface $option);
 
     /**
+     * Get variant position in list.
+     *
+     * @return integer
+     */
+    function getPosition();
+
+    /**
+     * Set variant position in list.
+     *
+     * @param integer $position
+     */
+    function setPosition($position);
+
+    /**
      * Get creation time.
      *
      * @return DateTime

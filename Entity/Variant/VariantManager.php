@@ -110,6 +110,24 @@ class VariantManager extends BaseVariantManager
     /**
      * {@inheritdoc}
      */
+    public function moveVariantUp(VariantInterface $variant)
+    {
+        $variant->setPosition($variant->getPosition() + 1);
+        $this->persistVariant($variant);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function moveVariantDown(VariantInterface $variant)
+    {
+        $variant->setPosition($variant->getPosition() - 1);
+        $this->persistVariant($variant);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function findVariant($id)
     {
         return $this->repository->find($id);

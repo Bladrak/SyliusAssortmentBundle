@@ -35,7 +35,9 @@ final class SyliusAssortmentEvents
     const PROTOTYPE_UPDATE = 'sylius_assortment.event.prototype.update';
     const PROTOTYPE_DELETE = 'sylius_assortment.event.prototype.delete';
 
-    const VARIANT_CREATE = 'sylius_assortment.event.variant.create';
-    const VARIANT_UPDATE = 'sylius_assortment.event.variant.update';
-    const VARIANT_DELETE = 'sylius_assortment.event.variant.delete';
+    const VARIANT_CREATE    = 'sylius_assortment.event.variant.create';
+    const VARIANT_UPDATE    = 'sylius_assortment.event.variant.update';
+    const VARIANT_DELETE    = 'sylius_assortment.event.variant.delete';
+    const VARIANT_MOVE_UP   = 'sylius_assortment.event.variant.move_up';
+    const VARIANT_MOVE_DOWN = 'sylius_assortment.event.variant.move_down';
 }

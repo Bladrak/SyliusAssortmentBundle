@@ -156,6 +156,42 @@ class VariantController extends Controller
     }
 
     /**
+     * Moves variant up in the list.
+     *
+     * @param integer $id The variant id
+     *
+     * @return Response
+     */
+    public function moveUpAction($id)
+    {
+        $variant = $this->findVariantOr404($id);
+
+        $this->container->get('event_dispatcher')->dispatch(SyliusAssortmentEvents::VARIANT_MOVE_UP, new FilterVariantEvent($variant));
+        $this->container->get('sylius_assortment.manipulator.variant')->moveUp($variant);
+        $this->setFlash('success', 'sylius_assortment.flash.variant.moved');
+
+        return new RedirectResponse($this->container->get('request')->headers->get('referer'));
+    }
+
+    /**
+     * Moves variant down in the list.
+     *
+     * @param integer $id The variant id
+     *
+     * @return Response
+     */
+    public function moveDownAction($id)
+    {
+        $variant = $this->findVariantOr404($id);
+
+        $this->container->get('event_dispatcher')->dispatch(SyliusAssortmentEvents::VARIANT_MOVE_DOWN, new FilterVariantEvent($variant));
+        $this->container->get('sylius_assortment.manipulator.variant')->moveDown($variant);
+        $this->setFlash('success', 'sylius_assortment.flash.variant.moved');
+
+        return new RedirectResponse($this->container->get('request')->headers->get('referer'));
+    }
+
+    /**
      * Tries to find variant with given id.
      * Throws a special http exception with code 404 if unsuccessful.
      *
