@@ -1,5 +1,5 @@
 {
-    "name": "sylius/assortment-bundle",
+    "name": "bladrak/assortment-bundle",
     "type": "symfony-bundle",
     "description": "Manage products, their variants, properties and more in your Symfony2 application.",
     "keywords": ["shop", "ecommerce", "products", "product"],
@@ -9,6 +9,11 @@
         {
             "name": "Paweł Jędrzejewski",
             "email": "pjedrzejewski@diweb.pl",
+            "homepage": "http://pjedrzejewski.com"
+        },
+        {
+            "name": "Hugo Briand",
+            "email": "hbriand@neotiq.com",
             "homepage": "http://pjedrzejewski.com"
         },
         {
