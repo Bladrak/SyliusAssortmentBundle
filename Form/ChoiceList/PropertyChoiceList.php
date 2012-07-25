@@ -36,8 +36,12 @@ class PropertyChoiceList extends ObjectChoiceList
     public function __construct(PropertyManagerInterface $propertyManager)
     {
         $this->propertyManager = $propertyManager;
+        
+        $props = $this->propertyManager->findProperties();
+        if (!is_array($props))
+            $props = $props->toArray();
 
-        parent::__construct($propertyManager->findProperties()->toArray(), 'name', array(), null, null, 'id');
+        parent::__construct($props, 'name', array(), null, null, 'id');
     }
 }
 
