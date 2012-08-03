@@ -46,7 +46,7 @@ interface ProductPropertyInterface
      *
      * @param ProductInterface $product
      */
-    function setProduct(ProductInterface $product);
+    function setProduct(ProductInterface $product = null);
 
     /**
      * Get property.
